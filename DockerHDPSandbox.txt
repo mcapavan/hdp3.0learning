@@ -1,0 +1,37 @@
+Docker HDP Sandbox
+
+https://hortonworks.com/tutorial/sandbox-deployment-and-install-guide/section/3/
+
+cd /path/to/script
+sh docker-deploy-{HDPversion}.sh
+
+Install/Deploy/Start HDP Sandbox
+cd /Users/pchalla/Documents/docker/HDP_2.6.5_deploy-scripts_180624d542a25
+sh docker-deploy-hdp265.sh
+
+VERIFY HDP SANDBOX
+docker ps
+
+STOP HDP SANDBOX
+docker stop sandbox-hdp
+docker stop sandbox-proxy
+
+RESTART HDP SANDBOX
+docker start sandbox-hdp
+docker start sandbox-proxy
+
+REMOVE HDP SANDBOX
+docker stop sandbox-hdp
+docker stop sandbox-proxy
+docker rm sandbox-hdp
+docker rm sandbox-proxy
+
+
+vi sandbox/proxy/proxy-deploy.sh
+bash sandbox/proxy/proxy-deploy.sh
+
+
+ssh -p 2222 maria_dev@localhost
+
+
+maria_dev / maria_dev 
